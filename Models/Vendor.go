@@ -127,6 +127,7 @@ type Vendor struct {
 	InsideOfficePhoto         *string `json:"InsideOfficePhoto"`
 	OfficeVideo               *string `json:"OfficeVideo"`
 	BankAccountProof          *string `json:"BankAccountProof"`
+	CompanyBankAccountStatement *string `json:"CompanyBankAccountStatement"`
 	OwnerIdentityCard         *string `json:"OwnerIdentityCard"`
 	SppkpDocument             *string `json:"SppkpDocument"`
 	SkptDocument              *string `json:"SkptDocument"`
