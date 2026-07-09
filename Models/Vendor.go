@@ -26,9 +26,14 @@ type Vendor struct {
 	ChangeReason           string   `json:"ChangeReason"`
 
 	// Step 2
+	ItemName               *string `json:"ItemName"`
+	SelectedCurrency       *string `json:"SelectedCurrency"`
+	EstimatedTotalValue    *float64 `json:"EstimatedTotalValue"`
 	PaymentTermType             string   `json:"PaymentTermType"`
 	CreditTermDay              string   `json:"CreditTermDay"`
 	AdvanceTermType             *string  `json:"AdvanceTermType"`
+	HasNegotiatedHigherPriorityTerm *bool `json:"HasNegotiatedHigherPriorityTerm"`
+	HigherPriorityNegotiationReason *string `json:"HigherPriorityNegotiationReason"`
 	CustomPaymentTerm           *string  `json:"CustomPaymentTerm"`
 	TaxType                     string   `json:"TaxType"`
 	PpnType                     string   `json:"PpnType"`
