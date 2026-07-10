@@ -24,6 +24,7 @@ type Vendor struct {
 	ExistingVendorName     string   `json:"ExistingVendorName"`
 	DisableExistingVendor  string   `json:"DisableExistingVendor"`
 	ChangeReason           string   `json:"ChangeReason"`
+	ChangeReasonNotes      string   `json:"ChangeReasonNotes"`
 
 	// Step 2
 	ItemName               *string `json:"ItemName"`
