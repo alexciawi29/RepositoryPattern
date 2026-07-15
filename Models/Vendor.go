@@ -143,6 +143,7 @@ type Vendor struct {
 	DeedOfAmendmentDocument   *string `json:"DeedOfAmendmentDocument"`
 	DirectorIdCardDocument    *string `json:"DirectorIdCardDocument"`
 	CompanyProfileDocument    *string `json:"CompanyProfileDocument"`
+	HigherPriorityNegotiationProofFile *string `json:"HigherPriorityNegotiationProofFile"`
 
 	// NPWP Extended Details
 	NpwpNumber         *string `json:"NpwpNumber"`
