@@ -2,31 +2,361 @@ basePath: /
 definitions:
   Models.Product:
     properties:
+      Name:
+        type: string
+      Price:
+        type: number
       createdAt:
         type: string
       deletedAt:
         $ref: '#/definitions/gorm.DeletedAt'
       id:
         type: integer
-      name:
+      updatedAt:
         type: string
-      price:
+    type: object
+  Models.PurchaseOrder:
+    properties:
+      OrderNumber:
+        type: string
+      Status:
+        type: string
+      TotalAmount:
         type: number
+      VendorId:
+        type: integer
+      createdAt:
+        type: string
+      deletedAt:
+        $ref: '#/definitions/gorm.DeletedAt'
+      id:
+        type: integer
       updatedAt:
         type: string
     type: object
   Models.User:
     properties:
+      Email:
+        type: string
+      Name:
+        type: string
       createdAt:
         type: string
       deletedAt:
         $ref: '#/definitions/gorm.DeletedAt'
-      email:
-        type: string
       id:
         type: integer
-      name:
+      updatedAt:
         type: string
+    type: object
+  Models.Vendor:
+    properties:
+      AdvanceTermType:
+        type: string
+      BankAccountHolder:
+        type: string
+      BankAccountNumber:
+        type: string
+      BankAccountProof:
+        type: string
+      BankCurrency:
+        type: string
+      BankName:
+        type: string
+      BusinessType:
+        description: Step 3
+        type: string
+      Certification:
+        items:
+          type: string
+        type: array
+      ChangeReason:
+        type: string
+      ChangeReasonNotes:
+        type: string
+      ChecklistSummary:
+        description: Internal Review Checklist States
+        type: string
+      CityArea:
+        type: string
+      CompanyBankAccountStatement:
+        type: string
+      CompanyName:
+        type: string
+      CompanyProfileDocument:
+        type: string
+      CompanySize:
+        type: string
+      CompanyStampInvoiceHeader:
+        type: string
+      ContactPersonFullName:
+        type: string
+      ContactPersonJobTitle:
+        type: string
+      ContactPersonWhatsappCode:
+        type: string
+      ContactPersonWhatsappNumber:
+        type: string
+      Country:
+        type: string
+      CreditTermDay:
+        type: string
+      CustomBankName:
+        type: string
+      CustomIndustryType:
+        type: string
+      CustomPaymentTerm:
+        type: string
+      CustomPaymentTermApproval:
+        description: Attachments
+        type: string
+      DeedOfAmendmentDocument:
+        type: string
+      DeedOfEstablishmentDocument:
+        type: string
+      DefaultDiscount:
+        type: string
+      Deleted:
+        type: string
+      DeliveryCityArea:
+        items:
+          type: string
+        type: array
+      DeliveryMethod:
+        type: string
+      DeliveryType:
+        type: string
+      DepartmentDivision:
+        type: string
+      Detail:
+        type: string
+      DirectorIdCardDocument:
+        type: string
+      DisableExistingVendor:
+        type: string
+      DiverWork:
+        type: string
+      EstimatedTotalValue:
+        type: number
+      ExistingVendorName:
+        type: string
+      FrontOfficePhoto:
+        type: string
+      FullAddress:
+        type: string
+      HasCompanyBankAccount:
+        description: Step 5
+        type: boolean
+      HasNegotiatedHigherPriorityTerm:
+        type: boolean
+      HigherPriorityNegotiationProofFile:
+        type: string
+      HigherPriorityNegotiationReason:
+        type: string
+      IndustryType:
+        description: Step 4
+        type: string
+      InformationScreenshot:
+        type: string
+      InformationSource:
+        type: string
+      InquiryContactEmail:
+        type: string
+      InquiryContactName:
+        type: string
+      InquiryContactPhone:
+        type: string
+      InquiryContactPhoneCode:
+        type: string
+      InquiryContactTitle:
+        type: string
+      InquirySameAsMain:
+        type: boolean
+      InsideOfficePhoto:
+        type: string
+      IntegrityPactSignerName:
+        type: string
+      IntegrityPactSignerRole:
+        type: string
+      InternalPicFullName:
+        type: string
+      InternalPicJobTitle:
+        type: string
+      InternalPicWhatsappCode:
+        type: string
+      InternalPicWhatsappNumber:
+        type: string
+      IsIntegrityPactAccepted:
+        description: Step 6
+        type: boolean
+      ItemName:
+        description: Step 2
+        type: string
+      MainContactEmail:
+        type: string
+      MainContactName:
+        type: string
+      MainContactPhone:
+        type: string
+      MainContactPhoneCode:
+        type: string
+      MainContactTitle:
+        type: string
+      MapUrl:
+        type: string
+      NibAddress:
+        type: string
+      NibDocument:
+        type: string
+      NibEmail:
+        type: string
+      NibIssuedDate:
+        type: string
+      NibNumber:
+        description: NIB Extended Details
+        type: string
+      NibPhone:
+        type: string
+      NpwpDocument:
+        type: string
+      NpwpNumber:
+        description: NPWP Extended Details
+        type: string
+      NpwpRegisteredDate:
+        type: string
+      NpwpTaxOffice:
+        type: string
+      OfficePhone:
+        type: string
+      OfficePhoneCode:
+        type: string
+      OfficeVideo:
+        type: string
+      OrderType:
+        type: string
+      OwnerIdentityCard:
+        type: string
+      PaymentContactEmail:
+        type: string
+      PaymentContactName:
+        type: string
+      PaymentContactPhone:
+        type: string
+      PaymentContactPhoneCode:
+        type: string
+      PaymentContactTitle:
+        type: string
+      PaymentSameAsMain:
+        type: boolean
+      PaymentTermType:
+        type: string
+      PicDepartment:
+        type: string
+      PicEmail:
+        type: string
+      PicName:
+        description: Step 1
+        type: string
+      PicRole:
+        type: string
+      PicSupervisorName:
+        type: string
+      PoContactEmail:
+        type: string
+      PoContactName:
+        type: string
+      PoContactPhone:
+        type: string
+      PoContactPhoneCode:
+        type: string
+      PoContactTitle:
+        type: string
+      PoSameAsMain:
+        type: boolean
+      PostalCode:
+        type: string
+      PpnType:
+        type: string
+      Province:
+        type: string
+      RecommenderPicFullName:
+        type: string
+      RecommenderPicJobTitle:
+        type: string
+      RecommenderPicWhatsappCode:
+        type: string
+      RecommenderPicWhatsappNumber:
+        type: string
+      RecommenderVendorName:
+        type: string
+      ReferenceNumber:
+        type: string
+      RegistrationPurpose:
+        items:
+          type: string
+        type: array
+      ReimburseTo:
+        type: string
+      ReviewIsBunker:
+        type: boolean
+      ReviewIsDataMatch:
+        type: boolean
+      ReviewIsForeignVendor:
+        type: boolean
+      ReviewIsGovernment:
+        type: boolean
+      ReviewIsIdFilled:
+        type: boolean
+      ReviewIsInternal:
+        type: boolean
+      ReviewIsLocalBusiness:
+        type: boolean
+      ReviewIsReimburse:
+        type: boolean
+      ReviewIsShipment:
+        type: boolean
+      ReviewIsThirdParty:
+        type: boolean
+      ReviewIsVendorAcc:
+        type: boolean
+      ReviewIsViaHardcopy:
+        type: boolean
+      ReviewIsViaWeb:
+        type: boolean
+      SelectedCurrency:
+        type: string
+      ShipmentMethod:
+        type: string
+      SkptDocument:
+        type: string
+      SppkpDocument:
+        type: string
+      StateCity:
+        type: string
+      Step2DeliveryType:
+        type: string
+      StreetAddress:
+        type: string
+      SubmissionType:
+        type: string
+      TaxType:
+        type: string
+      VendorBackground:
+        type: string
+      VendorType:
+        type: string
+      Website:
+        type: string
+      WorkOrderRemark:
+        type: string
+      YearEstablished:
+        type: string
+      createdAt:
+        type: string
+      deletedAt:
+        $ref: '#/definitions/gorm.DeletedAt'
+      id:
+        type: integer
       updatedAt:
         type: string
     type: object
@@ -60,7 +390,78 @@ definitions:
       TotalPages:
         type: integer
     type: object
-  V1.CreateProductRequest:
+  V6.ErrorResponse:
+    properties:
+      Error:
+        example: error message
+        type: string
+    type: object
+  V6.ODataPagedResponse-Models_PurchaseOrder:
+    properties:
+      ODataContext:
+        type: string
+      ODataCount:
+        type: integer
+      ODataNextLink:
+        type: string
+      Value:
+        items:
+          $ref: '#/definitions/Models.PurchaseOrder'
+        type: array
+    type: object
+  V6.ODataPagedResponse-Models_User:
+    properties:
+      ODataContext:
+        type: string
+      ODataCount:
+        type: integer
+      ODataNextLink:
+        type: string
+      Value:
+        items:
+          $ref: '#/definitions/Models.User'
+        type: array
+    type: object
+  V6.ODataPagedResponse-Models_Vendor:
+    properties:
+      ODataContext:
+        type: string
+      ODataCount:
+        type: integer
+      ODataNextLink:
+        type: string
+      Value:
+        items:
+          $ref: '#/definitions/Models.Vendor'
+        type: array
+    type: object
+  V6.ServiceDocumentEntry:
+    properties:
+      Kind:
+        type: string
+      Name:
+        type: string
+      Url:
+        type: string
+    type: object
+  V6.ServiceDocumentResponse:
+    properties:
+      '@odata.context':
+        type: string
+      Value:
+        items:
+          $ref: '#/definitions/V6.ServiceDocumentEntry'
+        type: array
+    type: object
+  gorm.DeletedAt:
+    properties:
+      time:
+        type: string
+      valid:
+        description: Valid is true if Time is not NULL
+        type: boolean
+    type: object
+  tutorial_go_Controller_V1.CreateProductRequest:
     properties:
       Name:
         example: Laptop
@@ -72,7 +473,7 @@ definitions:
     - Name
     - Price
     type: object
-  V1.CreateUserRequest:
+  tutorial_go_Controller_V1.CreateUserRequest:
     properties:
       Email:
         example: herris@example.com
@@ -84,19 +485,19 @@ definitions:
     - Email
     - Name
     type: object
-  V1.ErrorResponse:
+  tutorial_go_Controller_V1.ErrorResponse:
     properties:
       Error:
         example: error message
         type: string
     type: object
-  V1.MessageResponse:
+  tutorial_go_Controller_V1.MessageResponse:
     properties:
       Message:
         example: operation successful
         type: string
     type: object
-  V1.UpdateProductRequest:
+  tutorial_go_Controller_V1.UpdateProductRequest:
     properties:
       Name:
         example: Laptop Pro
@@ -105,7 +506,7 @@ definitions:
         example: 18000000
         type: number
     type: object
-  V1.UpdateUserRequest:
+  tutorial_go_Controller_V1.UpdateUserRequest:
     properties:
       Email:
         example: herris.new@example.com
@@ -114,13 +515,13 @@ definitions:
         example: Herris Updated
         type: string
     type: object
-  V2.ErrorResponse:
+  tutorial_go_Controller_V2.ErrorResponse:
     properties:
       Error:
         example: error message
         type: string
     type: object
-  V2.ODataPagedResponse-Models_Product:
+  tutorial_go_Controller_V2.ODataPagedResponse-Models_Product:
     properties:
       '@odata.context':
         type: string
@@ -133,7 +534,7 @@ definitions:
           $ref: '#/definitions/Models.Product'
         type: array
     type: object
-  V2.ODataPagedResponse-Models_User:
+  tutorial_go_Controller_V2.ODataPagedResponse-Models_User:
     properties:
       '@odata.context':
         type: string
@@ -146,7 +547,7 @@ definitions:
           $ref: '#/definitions/Models.User'
         type: array
     type: object
-  V2.ServiceDocumentEntry:
+  tutorial_go_Controller_V2.ServiceDocumentEntry:
     properties:
       kind:
         type: string
@@ -155,29 +556,125 @@ definitions:
       url:
         type: string
     type: object
-  V2.ServiceDocumentResponse:
+  tutorial_go_Controller_V2.ServiceDocumentResponse:
     properties:
       '@odata.context':
         type: string
       value:
         items:
-          $ref: '#/definitions/V2.ServiceDocumentEntry'
+          $ref: '#/definitions/tutorial_go_Controller_V2.ServiceDocumentEntry'
         type: array
     type: object
-  gorm.DeletedAt:
+  tutorial_go_Handler_V1.CreateProductRequest:
     properties:
-      time:
+      Name:
+        example: Laptop
         type: string
-      valid:
-        description: Valid is true if Time is not NULL
-        type: boolean
+      Price:
+        example: 15000000
+        type: number
+    required:
+    - Name
+    - Price
     type: object
-host: localhost:8080
+  tutorial_go_Handler_V1.CreateUserRequest:
+    properties:
+      Email:
+        example: herris@example.com
+        type: string
+      Name:
+        example: Herris
+        type: string
+    required:
+    - Email
+    - Name
+    type: object
+  tutorial_go_Handler_V1.ErrorResponse:
+    properties:
+      Error:
+        example: error message
+        type: string
+    type: object
+  tutorial_go_Handler_V1.MessageResponse:
+    properties:
+      Message:
+        example: operation successful
+        type: string
+    type: object
+  tutorial_go_Handler_V1.UpdateProductRequest:
+    properties:
+      Name:
+        example: Laptop Pro
+        type: string
+      Price:
+        example: 18000000
+        type: number
+    type: object
+  tutorial_go_Handler_V1.UpdateUserRequest:
+    properties:
+      Email:
+        example: herris.new@example.com
+        type: string
+      Name:
+        example: Herris Updated
+        type: string
+    type: object
+  tutorial_go_Handler_V2.ErrorResponse:
+    properties:
+      Error:
+        example: error message
+        type: string
+    type: object
+  tutorial_go_Handler_V2.ODataPagedResponse-Models_Product:
+    properties:
+      '@odata.context':
+        type: string
+      '@odata.count':
+        type: integer
+      '@odata.nextLink':
+        type: string
+      value:
+        items:
+          $ref: '#/definitions/Models.Product'
+        type: array
+    type: object
+  tutorial_go_Handler_V2.ODataPagedResponse-Models_User:
+    properties:
+      '@odata.context':
+        type: string
+      '@odata.count':
+        type: integer
+      '@odata.nextLink':
+        type: string
+      value:
+        items:
+          $ref: '#/definitions/Models.User'
+        type: array
+    type: object
+  tutorial_go_Handler_V2.ServiceDocumentEntry:
+    properties:
+      kind:
+        type: string
+      name:
+        type: string
+      url:
+        type: string
+    type: object
+  tutorial_go_Handler_V2.ServiceDocumentResponse:
+    properties:
+      '@odata.context':
+        type: string
+      value:
+        items:
+          $ref: '#/definitions/tutorial_go_Handler_V2.ServiceDocumentEntry'
+        type: array
+    type: object
+host: localhost:3020
 info:
   contact: {}
   description: REST API with Gin, GORM, and Swagger — v1 uses custom query params,
     v2 uses OData
-  title: Tutorial Go API
+  title: Go API V6
   version: "2.0"
 paths:
   /api/v1/products:
@@ -219,7 +716,7 @@ paths:
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/V1.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V1.ErrorResponse'
       summary: Get all products
       tags:
       - products
@@ -233,7 +730,7 @@ paths:
         name: body
         required: true
         schema:
-          $ref: '#/definitions/V1.CreateProductRequest'
+          $ref: '#/definitions/tutorial_go_Handler_V1.CreateProductRequest'
       produces:
       - application/json
       responses:
@@ -244,11 +741,11 @@ paths:
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/V1.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V1.ErrorResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/V1.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V1.ErrorResponse'
       summary: Create a product
       tags:
       - products
@@ -267,15 +764,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/V1.MessageResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V1.MessageResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/V1.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V1.ErrorResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/V1.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V1.ErrorResponse'
       summary: Delete a product
       tags:
       - products
@@ -297,11 +794,11 @@ paths:
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/V1.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V1.ErrorResponse'
         "404":
           description: Not Found
           schema:
-            $ref: '#/definitions/V1.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V1.ErrorResponse'
       summary: Get product by ID
       tags:
       - products
@@ -320,7 +817,7 @@ paths:
         name: body
         required: true
         schema:
-          $ref: '#/definitions/V1.UpdateProductRequest'
+          $ref: '#/definitions/tutorial_go_Handler_V1.UpdateProductRequest'
       produces:
       - application/json
       responses:
@@ -331,11 +828,11 @@ paths:
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/V1.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V1.ErrorResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/V1.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V1.ErrorResponse'
       summary: Update a product
       tags:
       - products
@@ -378,7 +875,7 @@ paths:
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/V1.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V1.ErrorResponse'
       summary: Get all users
       tags:
       - users
@@ -392,7 +889,7 @@ paths:
         name: body
         required: true
         schema:
-          $ref: '#/definitions/V1.CreateUserRequest'
+          $ref: '#/definitions/tutorial_go_Handler_V1.CreateUserRequest'
       produces:
       - application/json
       responses:
@@ -403,11 +900,11 @@ paths:
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/V1.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V1.ErrorResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/V1.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V1.ErrorResponse'
       summary: Create a user
       tags:
       - users
@@ -426,15 +923,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/V1.MessageResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V1.MessageResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/V1.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V1.ErrorResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/V1.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V1.ErrorResponse'
       summary: Delete a user
       tags:
       - users
@@ -456,11 +953,11 @@ paths:
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/V1.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V1.ErrorResponse'
         "404":
           description: Not Found
           schema:
-            $ref: '#/definitions/V1.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V1.ErrorResponse'
       summary: Get user by ID
       tags:
       - users
@@ -479,7 +976,7 @@ paths:
         name: body
         required: true
         schema:
-          $ref: '#/definitions/V1.UpdateUserRequest'
+          $ref: '#/definitions/tutorial_go_Handler_V1.UpdateUserRequest'
       produces:
       - application/json
       responses:
@@ -490,11 +987,11 @@ paths:
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/V1.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V1.ErrorResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/V1.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V1.ErrorResponse'
       summary: Update a user
       tags:
       - users
@@ -507,7 +1004,7 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/V2.ServiceDocumentResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V2.ServiceDocumentResponse'
       summary: OData v4 service document
       tags:
       - odata
@@ -556,15 +1053,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/V2.ODataPagedResponse-Models_Product'
+            $ref: '#/definitions/tutorial_go_Handler_V2.ODataPagedResponse-Models_Product'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/V2.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V2.ErrorResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/V2.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V2.ErrorResponse'
       summary: Get all products (OData v4)
       tags:
       - products
@@ -586,11 +1083,11 @@ paths:
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/V2.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V2.ErrorResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/V2.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V2.ErrorResponse'
       summary: Get product count (OData v4)
       tags:
       - products
@@ -614,11 +1111,11 @@ paths:
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/V2.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V2.ErrorResponse'
         "404":
           description: Not Found
           schema:
-            $ref: '#/definitions/V2.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V2.ErrorResponse'
       summary: Get product by ID (OData v4)
       tags:
       - products
@@ -652,15 +1149,15 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/V2.ODataPagedResponse-Models_User'
+            $ref: '#/definitions/tutorial_go_Handler_V2.ODataPagedResponse-Models_User'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/V2.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V2.ErrorResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/V2.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V2.ErrorResponse'
       summary: Get all users (OData v4)
       tags:
       - users
@@ -682,11 +1179,11 @@ paths:
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/V2.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V2.ErrorResponse'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/V2.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V2.ErrorResponse'
       summary: Get user count (OData v4)
       tags:
       - users
@@ -710,12 +1207,600 @@ paths:
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/V2.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V2.ErrorResponse'
         "404":
           description: Not Found
           schema:
-            $ref: '#/definitions/V2.ErrorResponse'
+            $ref: '#/definitions/tutorial_go_Handler_V2.ErrorResponse'
       summary: Get user by ID (OData v4)
       tags:
       - users
+  /api/v6/odata/:
+    get:
+      description: Lists all available entity sets in the v6 API
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/V6.ServiceDocumentResponse'
+      summary: OData v6 service document
+      tags:
+      - odata
+  /api/v6/odata/$metadata:
+    get:
+      description: Returns the EDMX metadata document describing all entity types
+        and their properties
+      produces:
+      - text/xml
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: OData v6 metadata document
+      tags:
+      - odata
+  /api/v6/odata/purchase_orders:
+    get:
+      description: Returns a paginated PO collection using OData query options
+      parameters:
+      - description: 'Number of records to return (default: 10)'
+        in: query
+        name: $top
+        type: integer
+      - description: 'Number of records to skip (default: 0)'
+        in: query
+        name: $skip
+        type: integer
+      - description: Sort field and direction
+        in: query
+        name: $orderby
+        type: string
+      - description: OData filter
+        in: query
+        name: $filter
+        type: string
+      - description: Search term
+        in: query
+        name: $search
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/V6.ODataPagedResponse-Models_PurchaseOrder'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+      summary: Get all purchase orders (OData v6)
+      tags:
+      - purchase_orders
+    post:
+      consumes:
+      - application/json
+      description: Creates a new PO
+      parameters:
+      - description: PO data
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/Models.PurchaseOrder'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/Models.PurchaseOrder'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+      summary: Create a PO
+      tags:
+      - purchase_orders
+  /api/v6/odata/purchase_orders/$count:
+    get:
+      description: Returns the total number of POs as plain text
+      parameters:
+      - description: OData filter expression
+        in: query
+        name: $filter
+        type: string
+      produces:
+      - text/plain
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+      summary: Get PO count (OData v6)
+      tags:
+      - purchase_orders
+  /api/v6/odata/purchase_orders/{id}:
+    delete:
+      description: Deletes a PO by ID
+      parameters:
+      - description: PO ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+      summary: Delete a PO
+      tags:
+      - purchase_orders
+    get:
+      description: Returns a single PO with OData context
+      parameters:
+      - description: PO ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+      summary: Get PO by ID (OData v6)
+      tags:
+      - purchase_orders
+    put:
+      consumes:
+      - application/json
+      description: Updates a PO by ID
+      parameters:
+      - description: PO ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Updated PO data
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/Models.PurchaseOrder'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Models.PurchaseOrder'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+      summary: Update a PO
+      tags:
+      - purchase_orders
+  /api/v6/odata/users:
+    get:
+      description: Returns a paginated user collection using OData query options
+      parameters:
+      - description: 'Number of records to return (default: 10)'
+        in: query
+        name: $top
+        type: integer
+      - description: 'Number of records to skip (default: 0)'
+        in: query
+        name: $skip
+        type: integer
+      - description: Sort field and direction
+        in: query
+        name: $orderby
+        type: string
+      - description: OData filter
+        in: query
+        name: $filter
+        type: string
+      - description: Search term matched against name and email
+        in: query
+        name: $search
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/V6.ODataPagedResponse-Models_User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+      summary: Get all users (OData v6)
+      tags:
+      - users
+    post:
+      consumes:
+      - application/json
+      description: Creates a new user
+      parameters:
+      - description: User data
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/Models.User'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/Models.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+      summary: Create a user
+      tags:
+      - users
+  /api/v6/odata/users/$count:
+    get:
+      description: Returns the total number of users as plain text
+      parameters:
+      - description: OData filter expression
+        in: query
+        name: $filter
+        type: string
+      produces:
+      - text/plain
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+      summary: Get user count (OData v6)
+      tags:
+      - users
+  /api/v6/odata/users/{id}:
+    delete:
+      description: Deletes a user by ID
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+      summary: Delete a user
+      tags:
+      - users
+    get:
+      description: Returns a single user with OData v4 context
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+      summary: Get user by ID (OData v6)
+      tags:
+      - users
+    put:
+      consumes:
+      - application/json
+      description: Updates a user by ID
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Updated user data
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/Models.User'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Models.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+      summary: Update a user
+      tags:
+      - users
+  /api/v6/odata/vendors:
+    get:
+      description: Returns a paginated vendor collection using OData query options
+      parameters:
+      - description: 'Number of records to return (default: 10)'
+        in: query
+        name: $top
+        type: integer
+      - description: 'Number of records to skip (default: 0)'
+        in: query
+        name: $skip
+        type: integer
+      - description: Sort field and direction
+        in: query
+        name: $orderby
+        type: string
+      - description: OData filter
+        in: query
+        name: $filter
+        type: string
+      - description: Search term
+        in: query
+        name: $search
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/V6.ODataPagedResponse-Models_Vendor'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+      summary: Get all vendors (OData v6)
+      tags:
+      - vendors
+    post:
+      consumes:
+      - application/json
+      description: Creates a new vendor from full JSON payload
+      parameters:
+      - description: Vendor data
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/Models.Vendor'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/Models.Vendor'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+      summary: Create a vendor
+      tags:
+      - vendors
+  /api/v6/odata/vendors/$count:
+    get:
+      description: Returns the total number of vendors as plain text
+      parameters:
+      - description: OData filter expression
+        in: query
+        name: $filter
+        type: string
+      produces:
+      - text/plain
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+      summary: Get vendor count (OData v6)
+      tags:
+      - vendors
+  /api/v6/odata/vendors/{id}:
+    delete:
+      description: Deletes a vendor by ID
+      parameters:
+      - description: Vendor ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+      summary: Delete a vendor
+      tags:
+      - vendors
+    get:
+      description: Returns a single vendor with OData context
+      parameters:
+      - description: Vendor ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+      summary: Get vendor by ID (OData v6)
+      tags:
+      - vendors
+    put:
+      consumes:
+      - application/json
+      description: Updates a vendor by ID
+      parameters:
+      - description: Vendor ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Updated vendor data
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/Models.Vendor'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Models.Vendor'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/V6.ErrorResponse'
+      summary: Update a vendor
+      tags:
+      - vendors
 swagger: "2.0"

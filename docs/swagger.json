@@ -2,11 +2,11 @@
     "swagger": "2.0",
     "info": {
         "description": "REST API with Gin, GORM, and Swagger — v1 uses custom query params, v2 uses OData",
-        "title": "Tutorial Go API",
+        "title": "Go API V6",
         "contact": {},
         "version": "2.0"
     },
-    "host": "localhost:8080",
+    "host": "localhost:3020",
     "basePath": "/",
     "paths": {
         "/api/v1/products": {
@@ -67,7 +67,7 @@
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/V1.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.ErrorResponse"
                         }
                     }
                 }
@@ -91,7 +91,7 @@
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/V1.CreateProductRequest"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.CreateProductRequest"
                         }
                     }
                 ],
@@ -105,13 +105,13 @@
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/V1.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.ErrorResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/V1.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.ErrorResponse"
                         }
                     }
                 }
@@ -146,13 +146,13 @@
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/V1.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.ErrorResponse"
                         }
                     },
                     "404": {
                         "description": "Not Found",
                         "schema": {
-                            "$ref": "#/definitions/V1.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.ErrorResponse"
                         }
                     }
                 }
@@ -183,7 +183,7 @@
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/V1.UpdateProductRequest"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.UpdateProductRequest"
                         }
                     }
                 ],
@@ -197,13 +197,13 @@
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/V1.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.ErrorResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/V1.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.ErrorResponse"
                         }
                     }
                 }
@@ -230,19 +230,19 @@
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/V1.MessageResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.MessageResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/V1.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.ErrorResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/V1.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.ErrorResponse"
                         }
                     }
                 }
@@ -306,7 +306,7 @@
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/V1.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.ErrorResponse"
                         }
                     }
                 }
@@ -330,7 +330,7 @@
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/V1.CreateUserRequest"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.CreateUserRequest"
                         }
                     }
                 ],
@@ -344,13 +344,13 @@
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/V1.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.ErrorResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/V1.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.ErrorResponse"
                         }
                     }
                 }
@@ -385,13 +385,13 @@
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/V1.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.ErrorResponse"
                         }
                     },
                     "404": {
                         "description": "Not Found",
                         "schema": {
-                            "$ref": "#/definitions/V1.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.ErrorResponse"
                         }
                     }
                 }
@@ -422,7 +422,7 @@
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/V1.UpdateUserRequest"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.UpdateUserRequest"
                         }
                     }
                 ],
@@ -436,13 +436,13 @@
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/V1.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.ErrorResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/V1.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.ErrorResponse"
                         }
                     }
                 }
@@ -469,19 +469,19 @@
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/V1.MessageResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.MessageResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/V1.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.ErrorResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/V1.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V1.ErrorResponse"
                         }
                     }
                 }
@@ -501,7 +501,7 @@
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/V2.ServiceDocumentResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V2.ServiceDocumentResponse"
                         }
                     }
                 }
@@ -573,19 +573,19 @@
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/V2.ODataPagedResponse-Models_Product"
+                            "$ref": "#/definitions/tutorial_go_Handler_V2.ODataPagedResponse-Models_Product"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/V2.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V2.ErrorResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/V2.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V2.ErrorResponse"
                         }
                     }
                 }
@@ -619,13 +619,13 @@
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/V2.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V2.ErrorResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/V2.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V2.ErrorResponse"
                         }
                     }
                 }
@@ -661,13 +661,13 @@
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/V2.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V2.ErrorResponse"
                         }
                     },
                     "404": {
                         "description": "Not Found",
                         "schema": {
-                            "$ref": "#/definitions/V2.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V2.ErrorResponse"
                         }
                     }
                 }
@@ -719,19 +719,19 @@
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/V2.ODataPagedResponse-Models_User"
+                            "$ref": "#/definitions/tutorial_go_Handler_V2.ODataPagedResponse-Models_User"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/V2.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V2.ErrorResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/V2.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V2.ErrorResponse"
                         }
                     }
                 }
@@ -765,13 +765,13 @@
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/V2.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V2.ErrorResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/V2.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V2.ErrorResponse"
                         }
                     }
                 }
@@ -807,13 +807,902 @@
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/V2.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V2.ErrorResponse"
                         }
                     },
                     "404": {
                         "description": "Not Found",
                         "schema": {
-                            "$ref": "#/definitions/V2.ErrorResponse"
+                            "$ref": "#/definitions/tutorial_go_Handler_V2.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v6/odata/": {
+            "get": {
+                "description": "Lists all available entity sets in the v6 API",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "odata"
+                ],
+                "summary": "OData v6 service document",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ServiceDocumentResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v6/odata/$metadata": {
+            "get": {
+                "description": "Returns the EDMX metadata document describing all entity types and their properties",
+                "produces": [
+                    "text/xml"
+                ],
+                "tags": [
+                    "odata"
+                ],
+                "summary": "OData v6 metadata document",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v6/odata/purchase_orders": {
+            "get": {
+                "description": "Returns a paginated PO collection using OData query options",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "purchase_orders"
+                ],
+                "summary": "Get all purchase orders (OData v6)",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Number of records to return (default: 10)",
+                        "name": "$top",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "Number of records to skip (default: 0)",
+                        "name": "$skip",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Sort field and direction",
+                        "name": "$orderby",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "OData filter",
+                        "name": "$filter",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Search term",
+                        "name": "$search",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ODataPagedResponse-Models_PurchaseOrder"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "Creates a new PO",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "purchase_orders"
+                ],
+                "summary": "Create a PO",
+                "parameters": [
+                    {
+                        "description": "PO data",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Models.PurchaseOrder"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created",
+                        "schema": {
+                            "$ref": "#/definitions/Models.PurchaseOrder"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v6/odata/purchase_orders/$count": {
+            "get": {
+                "description": "Returns the total number of POs as plain text",
+                "produces": [
+                    "text/plain"
+                ],
+                "tags": [
+                    "purchase_orders"
+                ],
+                "summary": "Get PO count (OData v6)",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "OData filter expression",
+                        "name": "$filter",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v6/odata/purchase_orders/{id}": {
+            "get": {
+                "description": "Returns a single PO with OData context",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "purchase_orders"
+                ],
+                "summary": "Get PO by ID (OData v6)",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "PO ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": true
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "description": "Updates a PO by ID",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "purchase_orders"
+                ],
+                "summary": "Update a PO",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "PO ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "Updated PO data",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Models.PurchaseOrder"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Models.PurchaseOrder"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "Deletes a PO by ID",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "purchase_orders"
+                ],
+                "summary": "Delete a PO",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "PO ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v6/odata/users": {
+            "get": {
+                "description": "Returns a paginated user collection using OData query options",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "Get all users (OData v6)",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Number of records to return (default: 10)",
+                        "name": "$top",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "Number of records to skip (default: 0)",
+                        "name": "$skip",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Sort field and direction",
+                        "name": "$orderby",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "OData filter",
+                        "name": "$filter",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Search term matched against name and email",
+                        "name": "$search",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ODataPagedResponse-Models_User"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "Creates a new user",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "Create a user",
+                "parameters": [
+                    {
+                        "description": "User data",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Models.User"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created",
+                        "schema": {
+                            "$ref": "#/definitions/Models.User"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v6/odata/users/$count": {
+            "get": {
+                "description": "Returns the total number of users as plain text",
+                "produces": [
+                    "text/plain"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "Get user count (OData v6)",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "OData filter expression",
+                        "name": "$filter",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v6/odata/users/{id}": {
+            "get": {
+                "description": "Returns a single user with OData v4 context",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "Get user by ID (OData v6)",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "User ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": true
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "description": "Updates a user by ID",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "Update a user",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "User ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "Updated user data",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Models.User"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Models.User"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "Deletes a user by ID",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "Delete a user",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "User ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v6/odata/vendors": {
+            "get": {
+                "description": "Returns a paginated vendor collection using OData query options",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "vendors"
+                ],
+                "summary": "Get all vendors (OData v6)",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Number of records to return (default: 10)",
+                        "name": "$top",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "Number of records to skip (default: 0)",
+                        "name": "$skip",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Sort field and direction",
+                        "name": "$orderby",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "OData filter",
+                        "name": "$filter",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Search term",
+                        "name": "$search",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ODataPagedResponse-Models_Vendor"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "Creates a new vendor from full JSON payload",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "vendors"
+                ],
+                "summary": "Create a vendor",
+                "parameters": [
+                    {
+                        "description": "Vendor data",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Models.Vendor"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created",
+                        "schema": {
+                            "$ref": "#/definitions/Models.Vendor"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v6/odata/vendors/$count": {
+            "get": {
+                "description": "Returns the total number of vendors as plain text",
+                "produces": [
+                    "text/plain"
+                ],
+                "tags": [
+                    "vendors"
+                ],
+                "summary": "Get vendor count (OData v6)",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "OData filter expression",
+                        "name": "$filter",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v6/odata/vendors/{id}": {
+            "get": {
+                "description": "Returns a single vendor with OData context",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "vendors"
+                ],
+                "summary": "Get vendor by ID (OData v6)",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Vendor ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": true
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "description": "Updates a vendor by ID",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "vendors"
+                ],
+                "summary": "Update a vendor",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Vendor ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "Updated vendor data",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Models.Vendor"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Models.Vendor"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "Deletes a vendor by ID",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "vendors"
+                ],
+                "summary": "Delete a vendor",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Vendor ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/V6.ErrorResponse"
                         }
                     }
                 }
@@ -824,6 +1713,12 @@
         "Models.Product": {
             "type": "object",
             "properties": {
+                "Name": {
+                    "type": "string"
+                },
+                "Price": {
+                    "type": "number"
+                },
                 "createdAt": {
                     "type": "string"
                 },
@@ -833,11 +1728,34 @@
                 "id": {
                     "type": "integer"
                 },
-                "name": {
+                "updatedAt": {
+                    "type": "string"
+                }
+            }
+        },
+        "Models.PurchaseOrder": {
+            "type": "object",
+            "properties": {
+                "OrderNumber": {
                     "type": "string"
                 },
-                "price": {
+                "Status": {
+                    "type": "string"
+                },
+                "TotalAmount": {
                     "type": "number"
+                },
+                "VendorId": {
+                    "type": "integer"
+                },
+                "createdAt": {
+                    "type": "string"
+                },
+                "deletedAt": {
+                    "$ref": "#/definitions/gorm.DeletedAt"
+                },
+                "id": {
+                    "type": "integer"
                 },
                 "updatedAt": {
                     "type": "string"
@@ -847,20 +1765,482 @@
         "Models.User": {
             "type": "object",
             "properties": {
+                "Email": {
+                    "type": "string"
+                },
+                "Name": {
+                    "type": "string"
+                },
                 "createdAt": {
                     "type": "string"
                 },
                 "deletedAt": {
                     "$ref": "#/definitions/gorm.DeletedAt"
                 },
-                "email": {
-                    "type": "string"
-                },
                 "id": {
                     "type": "integer"
                 },
-                "name": {
+                "updatedAt": {
                     "type": "string"
+                }
+            }
+        },
+        "Models.Vendor": {
+            "type": "object",
+            "properties": {
+                "AdvanceTermType": {
+                    "type": "string"
+                },
+                "BankAccountHolder": {
+                    "type": "string"
+                },
+                "BankAccountNumber": {
+                    "type": "string"
+                },
+                "BankAccountProof": {
+                    "type": "string"
+                },
+                "BankCurrency": {
+                    "type": "string"
+                },
+                "BankName": {
+                    "type": "string"
+                },
+                "BusinessType": {
+                    "description": "Step 3",
+                    "type": "string"
+                },
+                "Certification": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "ChangeReason": {
+                    "type": "string"
+                },
+                "ChangeReasonNotes": {
+                    "type": "string"
+                },
+                "ChecklistSummary": {
+                    "description": "Internal Review Checklist States",
+                    "type": "string"
+                },
+                "CityArea": {
+                    "type": "string"
+                },
+                "CompanyBankAccountStatement": {
+                    "type": "string"
+                },
+                "CompanyName": {
+                    "type": "string"
+                },
+                "CompanyProfileDocument": {
+                    "type": "string"
+                },
+                "CompanySize": {
+                    "type": "string"
+                },
+                "CompanyStampInvoiceHeader": {
+                    "type": "string"
+                },
+                "ContactPersonFullName": {
+                    "type": "string"
+                },
+                "ContactPersonJobTitle": {
+                    "type": "string"
+                },
+                "ContactPersonWhatsappCode": {
+                    "type": "string"
+                },
+                "ContactPersonWhatsappNumber": {
+                    "type": "string"
+                },
+                "Country": {
+                    "type": "string"
+                },
+                "CreditTermDay": {
+                    "type": "string"
+                },
+                "CustomBankName": {
+                    "type": "string"
+                },
+                "CustomIndustryType": {
+                    "type": "string"
+                },
+                "CustomPaymentTerm": {
+                    "type": "string"
+                },
+                "CustomPaymentTermApproval": {
+                    "description": "Attachments",
+                    "type": "string"
+                },
+                "DeedOfAmendmentDocument": {
+                    "type": "string"
+                },
+                "DeedOfEstablishmentDocument": {
+                    "type": "string"
+                },
+                "DefaultDiscount": {
+                    "type": "string"
+                },
+                "Deleted": {
+                    "type": "string"
+                },
+                "DeliveryCityArea": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "DeliveryMethod": {
+                    "type": "string"
+                },
+                "DeliveryType": {
+                    "type": "string"
+                },
+                "DepartmentDivision": {
+                    "type": "string"
+                },
+                "Detail": {
+                    "type": "string"
+                },
+                "DirectorIdCardDocument": {
+                    "type": "string"
+                },
+                "DisableExistingVendor": {
+                    "type": "string"
+                },
+                "DiverWork": {
+                    "type": "string"
+                },
+                "EstimatedTotalValue": {
+                    "type": "number"
+                },
+                "ExistingVendorName": {
+                    "type": "string"
+                },
+                "FrontOfficePhoto": {
+                    "type": "string"
+                },
+                "FullAddress": {
+                    "type": "string"
+                },
+                "HasCompanyBankAccount": {
+                    "description": "Step 5",
+                    "type": "boolean"
+                },
+                "HasNegotiatedHigherPriorityTerm": {
+                    "type": "boolean"
+                },
+                "HigherPriorityNegotiationProofFile": {
+                    "type": "string"
+                },
+                "HigherPriorityNegotiationReason": {
+                    "type": "string"
+                },
+                "IndustryType": {
+                    "description": "Step 4",
+                    "type": "string"
+                },
+                "InformationScreenshot": {
+                    "type": "string"
+                },
+                "InformationSource": {
+                    "type": "string"
+                },
+                "InquiryContactEmail": {
+                    "type": "string"
+                },
+                "InquiryContactName": {
+                    "type": "string"
+                },
+                "InquiryContactPhone": {
+                    "type": "string"
+                },
+                "InquiryContactPhoneCode": {
+                    "type": "string"
+                },
+                "InquiryContactTitle": {
+                    "type": "string"
+                },
+                "InquirySameAsMain": {
+                    "type": "boolean"
+                },
+                "InsideOfficePhoto": {
+                    "type": "string"
+                },
+                "IntegrityPactSignerName": {
+                    "type": "string"
+                },
+                "IntegrityPactSignerRole": {
+                    "type": "string"
+                },
+                "InternalPicFullName": {
+                    "type": "string"
+                },
+                "InternalPicJobTitle": {
+                    "type": "string"
+                },
+                "InternalPicWhatsappCode": {
+                    "type": "string"
+                },
+                "InternalPicWhatsappNumber": {
+                    "type": "string"
+                },
+                "IsIntegrityPactAccepted": {
+                    "description": "Step 6",
+                    "type": "boolean"
+                },
+                "ItemName": {
+                    "description": "Step 2",
+                    "type": "string"
+                },
+                "MainContactEmail": {
+                    "type": "string"
+                },
+                "MainContactName": {
+                    "type": "string"
+                },
+                "MainContactPhone": {
+                    "type": "string"
+                },
+                "MainContactPhoneCode": {
+                    "type": "string"
+                },
+                "MainContactTitle": {
+                    "type": "string"
+                },
+                "MapUrl": {
+                    "type": "string"
+                },
+                "NibAddress": {
+                    "type": "string"
+                },
+                "NibDocument": {
+                    "type": "string"
+                },
+                "NibEmail": {
+                    "type": "string"
+                },
+                "NibIssuedDate": {
+                    "type": "string"
+                },
+                "NibNumber": {
+                    "description": "NIB Extended Details",
+                    "type": "string"
+                },
+                "NibPhone": {
+                    "type": "string"
+                },
+                "NpwpDocument": {
+                    "type": "string"
+                },
+                "NpwpNumber": {
+                    "description": "NPWP Extended Details",
+                    "type": "string"
+                },
+                "NpwpRegisteredDate": {
+                    "type": "string"
+                },
+                "NpwpTaxOffice": {
+                    "type": "string"
+                },
+                "OfficePhone": {
+                    "type": "string"
+                },
+                "OfficePhoneCode": {
+                    "type": "string"
+                },
+                "OfficeVideo": {
+                    "type": "string"
+                },
+                "OrderType": {
+                    "type": "string"
+                },
+                "OwnerIdentityCard": {
+                    "type": "string"
+                },
+                "PaymentContactEmail": {
+                    "type": "string"
+                },
+                "PaymentContactName": {
+                    "type": "string"
+                },
+                "PaymentContactPhone": {
+                    "type": "string"
+                },
+                "PaymentContactPhoneCode": {
+                    "type": "string"
+                },
+                "PaymentContactTitle": {
+                    "type": "string"
+                },
+                "PaymentSameAsMain": {
+                    "type": "boolean"
+                },
+                "PaymentTermType": {
+                    "type": "string"
+                },
+                "PicDepartment": {
+                    "type": "string"
+                },
+                "PicEmail": {
+                    "type": "string"
+                },
+                "PicName": {
+                    "description": "Step 1",
+                    "type": "string"
+                },
+                "PicRole": {
+                    "type": "string"
+                },
+                "PicSupervisorName": {
+                    "type": "string"
+                },
+                "PoContactEmail": {
+                    "type": "string"
+                },
+                "PoContactName": {
+                    "type": "string"
+                },
+                "PoContactPhone": {
+                    "type": "string"
+                },
+                "PoContactPhoneCode": {
+                    "type": "string"
+                },
+                "PoContactTitle": {
+                    "type": "string"
+                },
+                "PoSameAsMain": {
+                    "type": "boolean"
+                },
+                "PostalCode": {
+                    "type": "string"
+                },
+                "PpnType": {
+                    "type": "string"
+                },
+                "Province": {
+                    "type": "string"
+                },
+                "RecommenderPicFullName": {
+                    "type": "string"
+                },
+                "RecommenderPicJobTitle": {
+                    "type": "string"
+                },
+                "RecommenderPicWhatsappCode": {
+                    "type": "string"
+                },
+                "RecommenderPicWhatsappNumber": {
+                    "type": "string"
+                },
+                "RecommenderVendorName": {
+                    "type": "string"
+                },
+                "ReferenceNumber": {
+                    "type": "string"
+                },
+                "RegistrationPurpose": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "ReimburseTo": {
+                    "type": "string"
+                },
+                "ReviewIsBunker": {
+                    "type": "boolean"
+                },
+                "ReviewIsDataMatch": {
+                    "type": "boolean"
+                },
+                "ReviewIsForeignVendor": {
+                    "type": "boolean"
+                },
+                "ReviewIsGovernment": {
+                    "type": "boolean"
+                },
+                "ReviewIsIdFilled": {
+                    "type": "boolean"
+                },
+                "ReviewIsInternal": {
+                    "type": "boolean"
+                },
+                "ReviewIsLocalBusiness": {
+                    "type": "boolean"
+                },
+                "ReviewIsReimburse": {
+                    "type": "boolean"
+                },
+                "ReviewIsShipment": {
+                    "type": "boolean"
+                },
+                "ReviewIsThirdParty": {
+                    "type": "boolean"
+                },
+                "ReviewIsVendorAcc": {
+                    "type": "boolean"
+                },
+                "ReviewIsViaHardcopy": {
+                    "type": "boolean"
+                },
+                "ReviewIsViaWeb": {
+                    "type": "boolean"
+                },
+                "SelectedCurrency": {
+                    "type": "string"
+                },
+                "ShipmentMethod": {
+                    "type": "string"
+                },
+                "SkptDocument": {
+                    "type": "string"
+                },
+                "SppkpDocument": {
+                    "type": "string"
+                },
+                "StateCity": {
+                    "type": "string"
+                },
+                "Step2DeliveryType": {
+                    "type": "string"
+                },
+                "StreetAddress": {
+                    "type": "string"
+                },
+                "SubmissionType": {
+                    "type": "string"
+                },
+                "TaxType": {
+                    "type": "string"
+                },
+                "VendorBackground": {
+                    "type": "string"
+                },
+                "VendorType": {
+                    "type": "string"
+                },
+                "Website": {
+                    "type": "string"
+                },
+                "WorkOrderRemark": {
+                    "type": "string"
+                },
+                "YearEstablished": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string"
+                },
+                "deletedAt": {
+                    "$ref": "#/definitions/gorm.DeletedAt"
+                },
+                "id": {
+                    "type": "integer"
                 },
                 "updatedAt": {
                     "type": "string"
@@ -913,7 +2293,116 @@
                 }
             }
         },
-        "V1.CreateProductRequest": {
+        "V6.ErrorResponse": {
+            "type": "object",
+            "properties": {
+                "Error": {
+                    "type": "string",
+                    "example": "error message"
+                }
+            }
+        },
+        "V6.ODataPagedResponse-Models_PurchaseOrder": {
+            "type": "object",
+            "properties": {
+                "ODataContext": {
+                    "type": "string"
+                },
+                "ODataCount": {
+                    "type": "integer"
+                },
+                "ODataNextLink": {
+                    "type": "string"
+                },
+                "Value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Models.PurchaseOrder"
+                    }
+                }
+            }
+        },
+        "V6.ODataPagedResponse-Models_User": {
+            "type": "object",
+            "properties": {
+                "ODataContext": {
+                    "type": "string"
+                },
+                "ODataCount": {
+                    "type": "integer"
+                },
+                "ODataNextLink": {
+                    "type": "string"
+                },
+                "Value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Models.User"
+                    }
+                }
+            }
+        },
+        "V6.ODataPagedResponse-Models_Vendor": {
+            "type": "object",
+            "properties": {
+                "ODataContext": {
+                    "type": "string"
+                },
+                "ODataCount": {
+                    "type": "integer"
+                },
+                "ODataNextLink": {
+                    "type": "string"
+                },
+                "Value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Models.Vendor"
+                    }
+                }
+            }
+        },
+        "V6.ServiceDocumentEntry": {
+            "type": "object",
+            "properties": {
+                "Kind": {
+                    "type": "string"
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "Url": {
+                    "type": "string"
+                }
+            }
+        },
+        "V6.ServiceDocumentResponse": {
+            "type": "object",
+            "properties": {
+                "@odata.context": {
+                    "type": "string"
+                },
+                "Value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/V6.ServiceDocumentEntry"
+                    }
+                }
+            }
+        },
+        "gorm.DeletedAt": {
+            "type": "object",
+            "properties": {
+                "time": {
+                    "type": "string"
+                },
+                "valid": {
+                    "description": "Valid is true if Time is not NULL",
+                    "type": "boolean"
+                }
+            }
+        },
+        "tutorial_go_Controller_V1.CreateProductRequest": {
             "type": "object",
             "required": [
                 "Name",
@@ -930,7 +2419,7 @@
                 }
             }
         },
-        "V1.CreateUserRequest": {
+        "tutorial_go_Controller_V1.CreateUserRequest": {
             "type": "object",
             "required": [
                 "Email",
@@ -947,7 +2436,7 @@
                 }
             }
         },
-        "V1.ErrorResponse": {
+        "tutorial_go_Controller_V1.ErrorResponse": {
             "type": "object",
             "properties": {
                 "Error": {
@@ -956,7 +2445,7 @@
                 }
             }
         },
-        "V1.MessageResponse": {
+        "tutorial_go_Controller_V1.MessageResponse": {
             "type": "object",
             "properties": {
                 "Message": {
@@ -965,7 +2454,7 @@
                 }
             }
         },
-        "V1.UpdateProductRequest": {
+        "tutorial_go_Controller_V1.UpdateProductRequest": {
             "type": "object",
             "properties": {
                 "Name": {
@@ -978,7 +2467,7 @@
                 }
             }
         },
-        "V1.UpdateUserRequest": {
+        "tutorial_go_Controller_V1.UpdateUserRequest": {
             "type": "object",
             "properties": {
                 "Email": {
@@ -991,7 +2480,7 @@
                 }
             }
         },
-        "V2.ErrorResponse": {
+        "tutorial_go_Controller_V2.ErrorResponse": {
             "type": "object",
             "properties": {
                 "Error": {
@@ -1000,7 +2489,7 @@
                 }
             }
         },
-        "V2.ODataPagedResponse-Models_Product": {
+        "tutorial_go_Controller_V2.ODataPagedResponse-Models_Product": {
             "type": "object",
             "properties": {
                 "@odata.context": {
@@ -1020,7 +2509,7 @@
                 }
             }
         },
-        "V2.ODataPagedResponse-Models_User": {
+        "tutorial_go_Controller_V2.ODataPagedResponse-Models_User": {
             "type": "object",
             "properties": {
                 "@odata.context": {
@@ -1040,7 +2529,7 @@
                 }
             }
         },
-        "V2.ServiceDocumentEntry": {
+        "tutorial_go_Controller_V2.ServiceDocumentEntry": {
             "type": "object",
             "properties": {
                 "kind": {
@@ -1054,7 +2543,7 @@
                 }
             }
         },
-        "V2.ServiceDocumentResponse": {
+        "tutorial_go_Controller_V2.ServiceDocumentResponse": {
             "type": "object",
             "properties": {
                 "@odata.context": {
@@ -1063,20 +2552,163 @@
                 "value": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/V2.ServiceDocumentEntry"
+                        "$ref": "#/definitions/tutorial_go_Controller_V2.ServiceDocumentEntry"
                     }
                 }
             }
         },
-        "gorm.DeletedAt": {
+        "tutorial_go_Handler_V1.CreateProductRequest": {
+            "type": "object",
+            "required": [
+                "Name",
+                "Price"
+            ],
+            "properties": {
+                "Name": {
+                    "type": "string",
+                    "example": "Laptop"
+                },
+                "Price": {
+                    "type": "number",
+                    "example": 15000000
+                }
+            }
+        },
+        "tutorial_go_Handler_V1.CreateUserRequest": {
+            "type": "object",
+            "required": [
+                "Email",
+                "Name"
+            ],
+            "properties": {
+                "Email": {
+                    "type": "string",
+                    "example": "herris@example.com"
+                },
+                "Name": {
+                    "type": "string",
+                    "example": "Herris"
+                }
+            }
+        },
+        "tutorial_go_Handler_V1.ErrorResponse": {
             "type": "object",
             "properties": {
-                "time": {
+                "Error": {
+                    "type": "string",
+                    "example": "error message"
+                }
+            }
+        },
+        "tutorial_go_Handler_V1.MessageResponse": {
+            "type": "object",
+            "properties": {
+                "Message": {
+                    "type": "string",
+                    "example": "operation successful"
+                }
+            }
+        },
+        "tutorial_go_Handler_V1.UpdateProductRequest": {
+            "type": "object",
+            "properties": {
+                "Name": {
+                    "type": "string",
+                    "example": "Laptop Pro"
+                },
+                "Price": {
+                    "type": "number",
+                    "example": 18000000
+                }
+            }
+        },
+        "tutorial_go_Handler_V1.UpdateUserRequest": {
+            "type": "object",
+            "properties": {
+                "Email": {
+                    "type": "string",
+                    "example": "herris.new@example.com"
+                },
+                "Name": {
+                    "type": "string",
+                    "example": "Herris Updated"
+                }
+            }
+        },
+        "tutorial_go_Handler_V2.ErrorResponse": {
+            "type": "object",
+            "properties": {
+                "Error": {
+                    "type": "string",
+                    "example": "error message"
+                }
+            }
+        },
+        "tutorial_go_Handler_V2.ODataPagedResponse-Models_Product": {
+            "type": "object",
+            "properties": {
+                "@odata.context": {
                     "type": "string"
                 },
-                "valid": {
-                    "description": "Valid is true if Time is not NULL",
-                    "type": "boolean"
+                "@odata.count": {
+                    "type": "integer"
+                },
+                "@odata.nextLink": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Models.Product"
+                    }
+                }
+            }
+        },
+        "tutorial_go_Handler_V2.ODataPagedResponse-Models_User": {
+            "type": "object",
+            "properties": {
+                "@odata.context": {
+                    "type": "string"
+                },
+                "@odata.count": {
+                    "type": "integer"
+                },
+                "@odata.nextLink": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Models.User"
+                    }
+                }
+            }
+        },
+        "tutorial_go_Handler_V2.ServiceDocumentEntry": {
+            "type": "object",
+            "properties": {
+                "kind": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                }
+            }
+        },
+        "tutorial_go_Handler_V2.ServiceDocumentResponse": {
+            "type": "object",
+            "properties": {
+                "@odata.context": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/tutorial_go_Handler_V2.ServiceDocumentEntry"
+                    }
                 }
             }
         }

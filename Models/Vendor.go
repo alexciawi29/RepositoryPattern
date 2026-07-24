@@ -11,6 +11,11 @@ type Vendor struct {
 	Deleted string `json:"Deleted" gorm:"default:'F'"`
 
 	// Step 1
+	PicName               string   `json:"PicName"`
+	PicEmail              string   `json:"PicEmail"`
+	PicDepartment         string   `json:"PicDepartment"`
+	PicRole               string   `json:"PicRole"`
+	PicSupervisorName     string   `json:"PicSupervisorName"`
 	RegistrationPurpose   []string `json:"RegistrationPurpose" gorm:"serializer:json"`
 	VendorType             string   `json:"VendorType"`
 	Detail                 string   `json:"Detail"`

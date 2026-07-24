@@ -22,7 +22,7 @@ func SetupRouter() *gin.Engine {
 		c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
 		c.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
 		c.Writer.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With")
-		c.Writer.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS, GET, PUT, DELETE")
+		c.Writer.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS, GET, PUT, PATCH, DELETE")
 
 		if c.Request.Method == "OPTIONS" {
 			c.AbortWithStatus(204)
@@ -35,8 +35,7 @@ func SetupRouter() *gin.Engine {
 	// Expose uploads directory to public
 	r.Static("/uploads", "./uploads")
 
-	r.GET("/swagger/v1/swagger.json", docs.ServeOpenAPIJSON)
-	r.GET("/swaggerui/*any", ginSwagger.WrapHandler(swaggerFiles.Handler, ginSwagger.URL("/swagger/v1/swagger.json")))
+	r.GET("/swaggerui/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	userRepo := Repository.NewGormRepository[Models.User](Config.DB)
 	productRepo := Repository.NewGormRepository[Models.Product](Config.DB)
@@ -53,6 +52,7 @@ func SetupRouter() *gin.Engine {
 	vendorV6Controller := V6.NewVendorODataController(vendorRepo)
 	poV6Controller := V6.NewPurchaseOrderODataController(poRepo)
 	metadataV6Controller := V6.NewMetadataController()
+	internalApprovalV6Controller := &V6.InternalApprovalController{}
 
 	countryRepo := Repository.NewGormRepository[Models.Country](Config.DB)
 	provinceRepo := Repository.NewGormRepository[Models.Province](Config.DB)
@@ -153,6 +153,8 @@ func SetupRouter() *gin.Engine {
 		v6.GET("/Currency", masterV6Controller.GetCurrencies)
 		v6.GET("/IndustryType", masterV6Controller.GetIndustryTypes)
 		v6.GET("/PhoneCode", masterV6Controller.GetPhoneCodes)
+		v6.POST("/InternalApproval", internalApprovalV6Controller.Submit)
+		v6.GET("/InternalApproval/:vendorId", internalApprovalV6Controller.GetByVendorId)
 	}
 
 	return r
